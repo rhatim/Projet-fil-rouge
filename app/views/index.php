@@ -17,7 +17,7 @@ require APPROOT . '/views/includes/head.php';
                         </h3>
                         <p class="banner-sub text-white">Active Learning, Expert Teachers & Safe Environment</p>
                         <div class="d-flex align-items-center buttons-banner">
-                            <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-style mt-lg-5 mt-4">Sign Up Now</a>
+                            <a href="<?php echo URLROOT; ?>/pages/register" class="btn btn-style mt-lg-5 mt-4">Sign Up Now</a>
                         </div>
                     </div>
                     <div class="col-md-6 right-banner-2 text-end position-relative mt-md-0 mt-5">

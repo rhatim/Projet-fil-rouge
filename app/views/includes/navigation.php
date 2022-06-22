@@ -10,9 +10,9 @@
         </li>
         <li type="button" class="btn btn-style" style="padding: 5px 36px 6px;">
             <?php if (isset($_SESSION['user_id'])) : ?>
-                <a href="<?php echo URLROOT; ?>/users/logout">Log out</a>
+                <a href="<?php echo URLROOT; ?>/studentscontroller/logout">Log out</a>
             <?php else : ?>
-                <a href="<?php echo URLROOT; ?>/users/login">Login</a>
+                <a href="<?php echo URLROOT; ?>/pages/login">Login</a>
             <?php endif; ?>
         </li>
     </ul>
