@@ -9,10 +9,10 @@ define('DB_NAME', 'idealprof'); //Add your DB Name
 define('APPROOT', dirname(dirname(__FILE__)));
 
 //URLROOT (Dynamic links)
-define('URLROOT', 'http://localhost/idealprof');
+define('URLROOT', 'http://localhost/fil_rouge/Projet-fil-rouge');
 
 
 
-define('BASE_REQUEST_URL',preg_replace('#^/idealprof/pages/#i','',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH)));
+define('BASE_REQUEST_URL',preg_replace('#^/fil_rouge/Projet-fil-rouge/pages/#i','',parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH)));
 //Sitename
 define('SITENAME', 'IdealProf');

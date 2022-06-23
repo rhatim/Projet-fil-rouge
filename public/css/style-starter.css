@@ -18288,11 +18288,10 @@ h3.title-style {
 
 .w3l-banner {
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
     min-height: 100vh;
     position: relative;
     z-index: 1;
-    background: url(../images/banner.jpg) no-repeat center;
+    background: url("../img/banner.jpg") no-repeat center;
 }
 
 .w3l-banner:before {
@@ -18815,12 +18814,12 @@ ul.rating-list li a.review-color {
 }
 
 .w3l-service-1 .content23-grid1 {
-    background: url("../images/bg1.jpg") no-repeat center;
+    background: url("../img/bg1.jpg") no-repeat center;
     background-size: cover;
 }
 
 .w3l-service-1 .content23-grid2 {
-    background: url("../images/bg2.jpg") no-repeat center;
+    background: url("../img/bg2.jpg") no-repeat center;
     background-size: cover;
 }
 
@@ -19879,7 +19878,7 @@ h4.inner-text-title {
 }
 
 .contact-block textarea {
-    height: 180px;
+    height: 100px;
     margin: 0 0 20px 0;
 }
 

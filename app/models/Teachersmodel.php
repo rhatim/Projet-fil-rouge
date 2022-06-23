@@ -1,5 +1,5 @@
 <?php
-class Studentsmodel {
+class Teachersmodel {
     private $db;
     public function __construct() {
         $this->db = new Database;
@@ -8,7 +8,7 @@ class Studentsmodel {
     public function register($data) {
         // var_dump($data);
         // exit();
-        $this->db->query('INSERT INTO students (nom, prenom, email, phone, adresse, date, password) VALUES(:nom, :prenom, :email, :phone, :adresse, :date, :password)');
+        $this->db->query('INSERT INTO teachers (nom, prenom, email, phone, adresse, matiere, password) VALUES(:nom, :prenom, :email, :phone, :adresse, :matiere, :password)');
 
         //Bind values
         $this->db->bind(':nom', $data['nom']);
@@ -16,7 +16,7 @@ class Studentsmodel {
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':phone', $data['phone']);
         $this->db->bind(':adresse', $data['adresse']);
-        $this->db->bind(':date', $data['date']);
+        $this->db->bind(':matiere', $data['matiere']);
         $this->db->bind(':password', $data['password']);
         
 
@@ -29,7 +29,7 @@ class Studentsmodel {
     }
 
     public function login($email, $password) {
-        $this->db->query('SELECT * FROM students WHERE email = :email');
+        $this->db->query('SELECT * FROM teachers WHERE email = :email');
 
         //Bind value
         $this->db->bind(':email', $email);
@@ -48,7 +48,7 @@ class Studentsmodel {
     //Find user by email. Email is passed in by the Controller.
     public function findUserByEmail($email) {
         //Prepared statement
-        $this->db->query('SELECT * FROM students WHERE email = :email');
+        $this->db->query('SELECT * FROM teachers WHERE email = :email');
 
         //Email param will be binded with the email variable
         $this->db->bind(':email', $email);

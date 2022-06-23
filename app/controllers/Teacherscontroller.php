@@ -1,9 +1,9 @@
 <?php
-class Studentscontroller extends Controller
+class Teacherscontroller extends Controller
 {
     public function __construct()
     {
-        $this->studentModel = $this->model('Studentsmodel');
+        $this->teacherModel = $this->model('Teachersmodel');
     }
 
     public function register()
@@ -14,7 +14,7 @@ class Studentscontroller extends Controller
             'email' => '',
             'phone' => '',
             'adresse' => '',
-            'date' => '',
+            'matiere' => '',
             'password' => '',
             'confirmPassword' => '',
 
@@ -23,7 +23,7 @@ class Studentscontroller extends Controller
             'emailError' => '',
             'phoneError' => '',
             'adresseError' => '',
-            'dateError' => '',
+            'matiereError' => '',
             'passwordError' => '',
             'confirmPasswordError' => ''
         ];
@@ -39,7 +39,7 @@ class Studentscontroller extends Controller
                 'email' => trim($_POST['email']),
                 'phone' => trim($_POST['phone']),
                 'adresse' => trim($_POST['adresse']),
-                'date' => trim($_POST['date']),
+                'matiere' => trim($_POST['matiere']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
 
@@ -48,7 +48,7 @@ class Studentscontroller extends Controller
                 'emailError' => '',
                 'phoneError' => '',
                 'adresseError' => '',
-                'dateError' => '',
+                'matiereError' => '',
                 'passwordError' => '',
                 'confirmPasswordError' => ''
             ];
@@ -77,7 +77,7 @@ class Studentscontroller extends Controller
                 $data['emailError'] = 'Le format email n\'est pas valide.';
             } else {
                 //Check if email exists.
-                if ($this->studentModel->findUserByEmail($data['email'])) {
+                if ($this->teacherModel->findUserByEmail($data['email'])) {
                     $data['emailError'] = 'Votre email est dèja utilisé.';
                 }
             }
@@ -107,15 +107,15 @@ class Studentscontroller extends Controller
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
                 //Register user from model function
-                if ($this->studentModel->register($data)) {
+                if ($this->teacherModel->register($data)) {
                     //Redirect to the login page
-                    $this->view('studentslogin', $data);
+                    $this->view('teacherslogin', $data);
                 } else {
                     die('Something went wrong.');
                 }
             }
         }
-        $this->view('studentsregister', $data);
+        $this->view('teachersregister', $data);
     }
 
     public function login()
@@ -151,7 +151,7 @@ class Studentscontroller extends Controller
 
             //Check if all errors are empty
             if (empty($data['emailError']) && empty($data['passwordError'])) {
-                $loggedInUser = $this->studentModel->login($data['email'], $data['password']);
+                $loggedInUser = $this->teacherModel->login($data['email'], $data['password']);
 
                 if ($loggedInUser) {
                     $this->createUserSession($loggedInUser);
@@ -169,7 +169,7 @@ class Studentscontroller extends Controller
                 'passwordError' => ''
             ];
         }
-        $this->view('studentslogin', $data);
+        $this->view('teacherslogin', $data);
     }
 
     public function createUserSession($user)

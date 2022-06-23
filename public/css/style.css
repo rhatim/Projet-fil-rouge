@@ -160,6 +160,6 @@ input::placeholder {
 }
 
 .invalidFeedback {
-    color: #ff0000;
+    color: #fbff00;
     display: block;
 }

@@ -11,14 +11,26 @@ class Pages extends Controller
         $this->view('index');
     }
 
-    public function register()
+    public function teachersregister()
     {
-        $this->view('register');
+        $this->view('teachersregister');
     }
-    public function login()
+
+    public function teacherslogin()
     {
-        $this->view('login');
+        $this->view('teacherslogin');
     }
+
+    public function studentsregister()
+    {
+        $this->view('studentsregister');
+    }
+
+    public function studentslogin()
+    {
+        $this->view('studentslogin');
+    }
+
 
     public function home()
     {
