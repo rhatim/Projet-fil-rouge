@@ -10,6 +10,10 @@ class Pages extends Controller
     {
         $this->view('index');
     }
+    public function adminlogin()
+    {
+        $this->view('adminlogin');
+    }
 
     public function teachersregister()
     {

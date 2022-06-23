@@ -7,7 +7,7 @@
     </div>
     <div class="text-center">
         <img class="mt-4 w-50 rounded-full" style="height: 115px;" src="<?php echo URLROOT; ?>/public/img/visuals/profil.png" alt="profil image">
-        <h6 class="mt-3 fw-bold"><?php echo $_SESSION['username']; ?></h6>
+        <h6 class="mt-3 fw-bold"><?php echo $_SESSION['nom'].' '.$_SESSION['prenom']; ?></h6>
         <p class="ps mt-1 text-info">Admin</p>
     </div>
     <div class="text-left list-group list-group-flush my-3">

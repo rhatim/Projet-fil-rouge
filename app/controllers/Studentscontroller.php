@@ -158,7 +158,7 @@ class Studentscontroller extends Controller
                 } else {
                     $data['passwordError'] = 'Mot de passe ou email est incorrect.';
 
-                    $this->view('index', $data);
+                    $this->view('home', $data);
                 }
             }
         } else {
@@ -176,7 +176,9 @@ class Studentscontroller extends Controller
     {
         $_SESSION['id'] = $user->id;
         $_SESSION['email'] = $user->email;
-        header('location:' . URLROOT . '/pages/index');
+        $_SESSION['nom'] = $user->nom;
+        $_SESSION['prenom'] = $user->prenom;
+        header('location:' . URLROOT . '/pages/home');
     }
 
     public function logout()
