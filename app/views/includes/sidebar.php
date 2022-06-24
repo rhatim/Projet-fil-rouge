@@ -15,7 +15,7 @@
     <?php if ($_SESSION['role'] == 'Student') :  ?>
         <div class="text-left list-group list-group-flush my-3">
             <a href="<?php echo URLROOT; ?>/pages/home" class="px-4 py-1 list-group-item-action bg-transparent second-text"><button class="w-100  btn1 text-black fs-6 fw-bold <?php if (basename($_SERVER['REQUEST_URI']) == 'home') echo 'standard'; ?>" type="submit"><img class="mleft pb-1" src="<?php echo URLROOT; ?>/public/img/icons/Home.svg" alt="">&nbsp;&nbsp;Home</button></a>
-            <a href="<?php echo URLROOT; ?>/pages/courses" class="px-4 py-1 list-group-item-action bg-transparent second-text fw-bold"><button class="w-100 btn1 text-black fs-6 fw-bold <?php if (basename($_SERVER['REQUEST_URI']) == 'courses') echo 'standard'; ?>" type="submit"><img class="mleft pb-1" src="<?php echo URLROOT; ?>/public/img/icons/courses.svg" alt="">&nbsp;&nbsp;Courses</button></a>
+            <a href="<?php echo URLROOT; ?>/pages/courses" class="px-4 py-1 list-group-item-action bg-transparent second-text fw-bold"><button class="w-100 btn1 text-black fs-6 fw-bold <?php if (basename($_SERVER['REQUEST_URI']) == 'courses') echo 'standard'; ?>" type="submit"><img class="mleft pb-1" src="<?php echo URLROOT; ?>/public/img/icons/Report.svg" alt="">&nbsp;&nbsp;Courses</button></a>
         </div>
         <div class="text-left list-group list-group-flush my-4">
             <a href="<?php echo URLROOT; ?>/studentscontroller/logout" class="px-4 py-1 list-group-item-action bg-transparent second-text fw-bold"><button class="w-100 btn1 text-black fs-6 fw-bold pleft" type="submit">Logout&nbsp;&nbsp;&nbsp;&nbsp;<img class="pb-1" src="<?php echo URLROOT; ?>/public/img/icons/logout.svg" alt=""></button></a>

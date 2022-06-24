@@ -12,22 +12,38 @@ class Pages extends Controller
 
     public function teachersregister()
     {
-        $this->view('teachersregister');
+        if ($_SESSION['role'] == 'Teacher') {
+            $this->view('teachersregister');
+        } else {
+            $this->view('home');
+        }
     }
 
     public function teacherslogin()
     {
-        $this->view('teacherslogin');
+        if ($_SESSION['role'] == 'Teacher') {
+            $this->view('teacherslogin');
+        } else {
+            $this->view('home');
+        }
     }
 
     public function studentsregister()
     {
-        $this->view('studentsregister');
+        if ($_SESSION['role'] == 'Student') {
+            $this->view('studentsregister');
+        } else {
+            $this->view('home');
+        }
     }
 
     public function studentslogin()
     {
-        $this->view('studentslogin');
+        if ($_SESSION['role'] == 'Student') {
+            $this->view('studentslogin');
+        } else {
+            $this->view('home');
+        }
     }
 
     public function home()
@@ -38,7 +54,6 @@ class Pages extends Controller
             require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Adminmodels.php';
             require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Coursesmodel.php';
             require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Reservationsmodel.php';
-
             $s = new Studentsmodel;
             $t = new Teachersmodel;
             $c = new Coursesmodel;
@@ -54,34 +69,45 @@ class Pages extends Controller
 
     public function students()
     {
-        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Studentsmodel.php';
-        $m = new Studentsmodel;
-
-        if (isset($_GET['w'])) {
-            $this->view('students', $m->getsearch($_GET['w']));
-        } else {
+        if (!empty($_SESSION['role'])) {
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Studentsmodel.php';
+            $m = new Studentsmodel;
             $this->view('students', $m->get());
+        } else {
+            $this->view('index');
         }
     }
 
     public function courses()
     {
-        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Coursesmodel.php';
-        $m = new Coursesmodel;
-        $this->view('courses', $m->get());
+        if (!empty($_SESSION['role'])) {
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Coursesmodel.php';
+            $m = new Coursesmodel;
+            $this->view('courses', $m->get());
+        } else {
+            $this->view('index');
+        }
     }
 
     public function teachers()
     {
-        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Teachersmodel.php';
-        $m = new Teachersmodel;
-        $this->view('teachers', $m->get());
+        if (!empty($_SESSION['role'])) {
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Teachersmodel.php';
+            $m = new Teachersmodel;
+            $this->view('teachers', $m->get());
+        } else {
+            $this->view('index');
+        }
     }
 
     public function admins()
     {
-        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Adminmodels.php';
-        $m = new Adminmodels;
-        $this->view('admins', $m->get());
+        if (!empty($_SESSION['role'])) {
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Adminmodels.php';
+            $m = new Adminmodels;
+            $this->view('admins', $m->get());
+        } else {
+            $this->view('index');
+        }
     }
 }

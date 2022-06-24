@@ -128,10 +128,10 @@ require APPROOT . '/views/includes/header.php';
                         </div>
                     </div>
                     <div style="overflow-y: scroll;">
-                        <div style="height:70vh; padding:0;">
+                        <div style="height:39vh; padding:0;">
                             <?php if (count($data['reservation']) > 0) { ?>
                                 <?php foreach ($data['reservation'] as $row) { ?>
-                                    <div class="item row  ps px-0 bar mar py-2" id="info">
+                                    <div class="item row  ps px-0 bar mar py-2" id="info" style="background-color: #dbfefa;">
                                         <div style="display: none;">
                                             <p class="student_id"><?php echo $row->res_id ?></p>
                                         </div>

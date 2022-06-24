@@ -40,7 +40,7 @@ require APPROOT . '/views/includes/header.php';
                             <?php
                             if (count($data) > 0) {
                                 foreach ($data as $row) {
-                                    echo    '<div class="item row  ps px-0 bar mar py-2" id="info">
+                                    echo    '<div class="item row  ps px-0 bar mar py-2" id="info" style="background-color: #F0F9FF;">
                                                     <div style="display: none;">
                                                         <p class="student_id">' . $row->std_id . '</p>
                                                     </div>

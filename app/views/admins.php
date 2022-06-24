@@ -102,7 +102,7 @@ require APPROOT . '/views/includes/header.php';
                             <?php
                             if (count($data) > 0) {
                                 foreach ($data as $row) {
-                                    echo    '<div class="item row  ps px-0 bar mar py-2" id="info">
+                                    echo    '<div class="item row  ps px-0 bar mar py-2" id="info" style="background-color: #dbfef9;">
                                                     <div style="display: none;">
                                                         <p class="Admin_id">' . $row->ad_id . '</p>
                                                     </div>

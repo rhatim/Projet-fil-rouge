@@ -161,7 +161,6 @@ class Teacherscontroller extends Controller
                     $this->createUserSession($loggedInUser);
                 } else {
                     $data['passwordError'] = 'Mot de passe ou email est incorrect.';
-                    header('location:' . URLROOT . '/pages/home');
                 }
             }
         } else {
@@ -182,7 +181,7 @@ class Teacherscontroller extends Controller
         $_SESSION['nom'] = $user->nom;
         $_SESSION['prenom'] = $user->prenom;
         $_SESSION['role'] = $user->role;
-        header('location:' . URLROOT . '/pages/index');
+        header('location:' . URLROOT . '/pages/home');
     }
 
     public function logout()

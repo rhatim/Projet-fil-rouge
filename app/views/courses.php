@@ -121,7 +121,7 @@ require APPROOT . '/views/includes/header.php';
                         <div style="height:70vh; padding:0;">
                             <?php if (count($data) > 0) { ?>
                                 <?php foreach ($data as $row) { ?>
-                                    <div class="item row  ps px-0 bar mar py-2" id="info">
+                                    <div class="item row  ps px-0 bar mar py-2" id="info" style="background-color: #FEFBEC;">
                                         <div style="display: none;">
                                             <p class="student_id"><?php echo $row->crs_id ?></p>
                                         </div>

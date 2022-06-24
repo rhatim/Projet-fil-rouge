@@ -160,7 +160,6 @@ class Studentscontroller extends Controller
                     $this->createUserSession($loggedInUser);
                 } else {
                     $data['passwordError'] = 'Mot de passe ou email est incorrect.';
-                    header('location:' . URLROOT . '/pages/home');
                 }
             }
         } else {
