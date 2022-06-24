@@ -1,11 +1,6 @@
 <?php
 class Pages extends Controller
 {
-    public function __construct()
-    {
-        //$this->userModel = $this->model('User');
-    }
-
     public function index()
     {
         $this->view('index');
@@ -35,64 +30,57 @@ class Pages extends Controller
         $this->view('studentslogin');
     }
 
-
     public function home()
     {
-        // require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Studentmodels.php';
-        // require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Teachermodels.php';
-        // require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Parentmodels.php';
-        // require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Adminmodels.php';
-        // $s = new Studentmodels;
-        // $t = new Teachermodels;
-        // $p = new Parentmodels;
-        // $a = new Adminmodels;
-        
-        // //array for student by class
-        // $studentsByClass=$s->getStudentsByClass();
-        // $class_names='[';
-        // $class_students_counts='[';
-        // foreach($studentsByClass as $c){
-        //     $class_names.="'".$c->class_name."',";
-        //     $class_students_counts.="'".$c->students_count."',";
-        // }
-        // $class_names.=']';
-        // $class_students_counts.=']'; 
-        // , ['count_class'=>$studentsByClass, 'x_students_by_class'=>$class_names,'y_students_by_class'=>$class_students_counts,'students_m'=>$s->getStudentsMale(), 'students_f'=>$s->getStudentsFemale(), 'students'=>$s->get(), 'teachers'=>$t->get(), 'parents'=>$p->get(), 'admins'=>$a->get()]
-        
+        if (!empty($_SESSION['role'])) {
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Studentsmodel.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Teachersmodel.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Adminmodels.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Coursesmodel.php';
+            require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Reservationsmodel.php';
 
-        $this->view('home');
+            $s = new Studentsmodel;
+            $t = new Teachersmodel;
+            $c = new Coursesmodel;
+            $a = new Adminmodels;
+            $r = new Reservationsmodel;
+
+
+            $this->view('home', ['reservation' => $r->get(), 'courses' => $c->get(), 'students' => $s->get(), 'teachers' => $t->get(), 'admins' => $a->get()]);
+        } else {
+            $this->view('index');
+        }
     }
 
     public function students()
     {
-        require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Studentmodels.php';
-        $m = new Studentmodels;
-    
-        if(isset($_GET['w'])){
+        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Studentsmodel.php';
+        $m = new Studentsmodel;
+
+        if (isset($_GET['w'])) {
             $this->view('students', $m->getsearch($_GET['w']));
-        }else{
+        } else {
             $this->view('students', $m->get());
         }
-        
+    }
+
+    public function courses()
+    {
+        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Coursesmodel.php';
+        $m = new Coursesmodel;
+        $this->view('courses', $m->get());
     }
 
     public function teachers()
     {
-        require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Teachermodels.php';
-        $m = new Teachermodels;
+        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Teachersmodel.php';
+        $m = new Teachersmodel;
         $this->view('teachers', $m->get());
-    }
-
-    public function parents()
-    {
-        require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Parentmodels.php';
-        $m = new Parentmodels;
-        $this->view('parents', $m->get());
     }
 
     public function admins()
     {
-        require $_SERVER['DOCUMENT_ROOT'] . '/mvcloginregister/app/models/Adminmodels.php';
+        require $_SERVER['DOCUMENT_ROOT'] . '/fil_rouge/Projet-fil-rouge/app/models/Adminmodels.php';
         $m = new Adminmodels;
         $this->view('admins', $m->get());
     }

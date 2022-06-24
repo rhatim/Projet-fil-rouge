@@ -7,16 +7,35 @@ class Adminmodels
         $this->db = new Database;
     }
 
+    public function login($email, $password)
+    {
+        $this->db->query('SELECT * FROM admin WHERE email = :email');
+
+        //Bind value
+        $this->db->bind(':email', $email);
+
+        $row = $this->db->single();
+
+        $dataPassword = $row->password;
+
+        if ($password == $dataPassword) {
+            return $row;
+        } else {
+            return false;
+        }
+    }
 
     public function add($data)
     {
-        $this->db->query('INSERT INTO admins (name, email, role, password) VALUES(:name, :email, :role, :password)');
+        $this->db->query('INSERT INTO admin (nom, prenom, email, password, role) VALUES(:nom, :prenom, :email, :password, :role)');
 
         //Bind values
-        $this->db->bind(':name', $data['name']);
+        $this->db->bind(':nom', $data['nom']);
+        $this->db->bind(':prenom', $data['prenom']);
         $this->db->bind(':email', $data['email']);
-        $this->db->bind(':role', $data['role']);
         $this->db->bind(':password', $data['password']);
+        $this->db->bind(':role', $data['role']);
+
 
         //Execute function
         if ($this->db->execute()) {
@@ -26,59 +45,21 @@ class Adminmodels
         }
     }
 
-
     public function get()
     {
-        $this->db->query('SELECT * FROM admins order by id DESC');
+        $this->db->query('SELECT * FROM admin order by ad_id DESC');
         $this->db->execute();
         return $this->db->resultSet();
     }
 
-    public function edit($data)
-    {
-
-        $this->db->query("UPDATE admins SET name=:name,email=:email,role=:role,password=:password  where id =:id");
-
-        //Bind values
-        $this->db->bind(':id', $data['id']);
-        $this->db->bind(':name', $data['name']);
-        $this->db->bind(':email', $data['email']);
-        $this->db->bind(':role', $data['role']);
-        $this->db->bind(':password', $data['password']);
-
-        if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-
-
     public function delete($data)
     {
-        $this->db->query('DELETE FROM admins WHERE id=:id');
+        $this->db->query('DELETE FROM admin WHERE ad_id=:id');
 
         $this->db->bind(':id', $data['id']);
 
         //Execute function
         if ($this->db->execute()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    //Find user by email. Email is passed in by the Controller.
-    public function findUserByEmail($email) {
-        //Prepared statement
-        $this->db->query('SELECT * FROM admins WHERE email = :email');
-
-        //Email param will be binded with the email variable
-        $this->db->bind(':email', $email);
-
-        //Check if email is already registered
-        if($this->db->rowCount() > 0) {
             return true;
         } else {
             return false;

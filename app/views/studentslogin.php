@@ -26,16 +26,16 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="#abouts">About Us</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#abouts">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sign">Teacher</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Teacher</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sign">Student</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Student</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -85,7 +85,7 @@
                                         </div>
                                         <!-- Register buttons -->
                                         <div class="text-center mt-3">
-                                            <p class="text-light">Not a member? <a class="text-info" href="<?php echo URLROOT; ?>/users/register">Create an account!</a></p>
+                                            <p class="text-light">Not a member? <a class="text-info" href="<?php echo URLROOT; ?>/pages/studentsregister">Create an account!</a></p>
                                         </div>
                                     </form>
                                 </div>

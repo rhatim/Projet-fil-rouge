@@ -17,6 +17,8 @@ class Teacherscontroller extends Controller
             'matiere' => '',
             'password' => '',
             'confirmPassword' => '',
+            'role' => '',
+
 
             'nomError' => '',
             'prénomError' => '',
@@ -42,6 +44,8 @@ class Teacherscontroller extends Controller
                 'matiere' => trim($_POST['matiere']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
+                'role' => trim($_POST['role']),
+
 
                 'nomError' => '',
                 'prénomError' => '',
@@ -109,7 +113,7 @@ class Teacherscontroller extends Controller
                 //Register user from model function
                 if ($this->teacherModel->register($data)) {
                     //Redirect to the login page
-                    $this->view('teacherslogin', $data);
+                    header('location:' . URLROOT . '/pages/teacherslogin');
                 } else {
                     die('Something went wrong.');
                 }
@@ -157,8 +161,7 @@ class Teacherscontroller extends Controller
                     $this->createUserSession($loggedInUser);
                 } else {
                     $data['passwordError'] = 'Mot de passe ou email est incorrect.';
-
-                    $this->view('index', $data);
+                    header('location:' . URLROOT . '/pages/home');
                 }
             }
         } else {
@@ -176,6 +179,9 @@ class Teacherscontroller extends Controller
     {
         $_SESSION['id'] = $user->id;
         $_SESSION['email'] = $user->email;
+        $_SESSION['nom'] = $user->nom;
+        $_SESSION['prenom'] = $user->prenom;
+        $_SESSION['role'] = $user->role;
         header('location:' . URLROOT . '/pages/index');
     }
 
@@ -183,6 +189,21 @@ class Teacherscontroller extends Controller
     {
         unset($_SESSION['id']);
         unset($_SESSION['email']);
+        unset($_SESSION['nom']);
+        unset($_SESSION['prenom']);
+        unset($_SESSION['role']);
         header('location:' . URLROOT . '/pages/login');
+    }
+
+    public function delete()
+    {
+        $data = ['id' => $_POST['id']];
+        if ($this->teacherModel->delete($data)) {
+            //Redirect to the login page
+            header('location: ' . URLROOT . '/pages/teachers');
+        } else {
+            die('Something went wrong.');
+        }
+        $this->view('home', $data);
     }
 }

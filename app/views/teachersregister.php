@@ -26,16 +26,16 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="#abouts">About Us</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#abouts">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sign">Teacher</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Teacher</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sign">Student</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Student</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -111,6 +111,9 @@
                                                 <input type="password" placeholder="Confirmer Mot de Passe" name="confirmPassword" id="form2Example1" class="form-control" />
                                             </div>
                                         </div>
+                                        <div class="px-1" style="display: none;">
+                                            <input type="text" name="role" value="Teacher" id="form2Example1" class="form-control" />
+                                        </div>
 
                                         <div class="row mb-2">
                                             <div class="col d-flex justify-content-center">
@@ -128,7 +131,7 @@
                                         </div>
                                         <!-- login buttons -->
                                         <div class="text-center mt-3">
-                                            <p class="text-light">Already a member? <a class="text-info" href="<?php echo URLROOT; ?>/users/login">Let's login!</a></p>
+                                            <p class="text-light">Already a member? <a class="text-info" href="<?php echo URLROOT; ?>/pages/teacherslogin">Let's login!</a></p>
                                         </div>
                                     </form>
                                 </div>

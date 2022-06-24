@@ -221,17 +221,15 @@
                             <li><a href="#abouts">About Us</a></li>
                             <li><a href="#sign">Become a Teacher</a></li>
                             <li><a href="#sign">Become a Student</a></li>
+                            <li><a href="<?php echo URLROOT; ?>/pages/adminlogin">Espace Admin</a></li>
                             <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
-                <!-- copyright -->
                 <p class="copy-footer-29 text-center pt-lg-2 mt-5 pb-2">© 2021 IdealProf. All rights reserved.</p>
-                <!-- //copyright -->
             </div>
         </div>
     </footer>
-    <!-- //footer block -->
     <script src="<?php echo URLROOT; ?>/js/bootstrap.min.js"></script>
 </body>
 

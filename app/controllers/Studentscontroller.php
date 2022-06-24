@@ -17,6 +17,8 @@ class Studentscontroller extends Controller
             'date' => '',
             'password' => '',
             'confirmPassword' => '',
+            'role' => '',
+
 
             'nomError' => '',
             'prénomError' => '',
@@ -42,6 +44,7 @@ class Studentscontroller extends Controller
                 'date' => trim($_POST['date']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
+                'role' => trim($_POST['role']),
 
                 'nomError' => '',
                 'prénomError' => '',
@@ -109,7 +112,7 @@ class Studentscontroller extends Controller
                 //Register user from model function
                 if ($this->studentModel->register($data)) {
                     //Redirect to the login page
-                    $this->view('studentslogin', $data);
+                    header('location:' . URLROOT . '/pages/studentslogin');
                 } else {
                     die('Something went wrong.');
                 }
@@ -157,8 +160,7 @@ class Studentscontroller extends Controller
                     $this->createUserSession($loggedInUser);
                 } else {
                     $data['passwordError'] = 'Mot de passe ou email est incorrect.';
-
-                    $this->view('home', $data);
+                    header('location:' . URLROOT . '/pages/home');
                 }
             }
         } else {
@@ -178,6 +180,7 @@ class Studentscontroller extends Controller
         $_SESSION['email'] = $user->email;
         $_SESSION['nom'] = $user->nom;
         $_SESSION['prenom'] = $user->prenom;
+        $_SESSION['role'] = $user->role;
         header('location:' . URLROOT . '/pages/home');
     }
 
@@ -185,6 +188,10 @@ class Studentscontroller extends Controller
     {
         unset($_SESSION['id']);
         unset($_SESSION['email']);
+        unset($_SESSION['nom']);
+        unset($_SESSION['prenom']);
+        unset($_SESSION['role']);
+
         header('location:' . URLROOT . '/pages/login');
     }
 }

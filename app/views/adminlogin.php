@@ -2,14 +2,11 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="<?php echo URLROOT; ?>/public/img/Logo_icon.png" type="image/png">
     <title><?php echo SITENAME; ?></title>
-    <!-- Google fonts -->
     <link href="//fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- Template CSS Style link -->
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/style-starter.css">
 </head>
 
@@ -21,7 +18,7 @@
                     <div class="col-12">
                         <div class="auth-form-light text-center p-5">
                             <div class="brand-logo m-1">
-                                <img src="<?php echo URLROOT; ?>/img/logolong.png" style="width: 250px;">
+                                <a href="<?php echo URLROOT; ?>/pages/index"><img src="<?php echo URLROOT; ?>/img/logolong.png" style="width: 250px;"></a>
                             </div>
                             <h4>Authentification</h4>
                             <?php if (!empty($data)) { ?>

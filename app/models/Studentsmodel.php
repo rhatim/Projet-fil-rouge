@@ -8,7 +8,7 @@ class Studentsmodel {
     public function register($data) {
         // var_dump($data);
         // exit();
-        $this->db->query('INSERT INTO students (nom, prenom, email, phone, adresse, date, password) VALUES(:nom, :prenom, :email, :phone, :adresse, :date, :password)');
+        $this->db->query('INSERT INTO students (nom, prenom, email, phone, adresse, date, password, role) VALUES(:nom, :prenom, :email, :phone, :adresse, :date, :password, :role)');
 
         //Bind values
         $this->db->bind(':nom', $data['nom']);
@@ -18,7 +18,7 @@ class Studentsmodel {
         $this->db->bind(':adresse', $data['adresse']);
         $this->db->bind(':date', $data['date']);
         $this->db->bind(':password', $data['password']);
-        
+        $this->db->bind(':role', $data['role']);
 
         //Execute function
         if ($this->db->execute()) {
@@ -61,4 +61,12 @@ class Studentsmodel {
             return false;
         }
     }
+
+    public function get()
+    {
+        $this->db->query('SELECT * FROM students order by std_id DESC');
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
+
 }

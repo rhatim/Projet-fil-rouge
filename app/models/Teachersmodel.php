@@ -1,14 +1,17 @@
 <?php
-class Teachersmodel {
+class Teachersmodel
+{
     private $db;
-    public function __construct() {
+    public function __construct()
+    {
         $this->db = new Database;
     }
 
-    public function register($data) {
+    public function register($data)
+    {
         // var_dump($data);
         // exit();
-        $this->db->query('INSERT INTO teachers (nom, prenom, email, phone, adresse, matiere, password) VALUES(:nom, :prenom, :email, :phone, :adresse, :matiere, :password)');
+        $this->db->query('INSERT INTO teachers (nom, prenom, email, phone, adresse, matiere, password, role) VALUES(:nom, :prenom, :email, :phone, :adresse, :matiere, :password, :role)');
 
         //Bind values
         $this->db->bind(':nom', $data['nom']);
@@ -18,7 +21,9 @@ class Teachersmodel {
         $this->db->bind(':adresse', $data['adresse']);
         $this->db->bind(':matiere', $data['matiere']);
         $this->db->bind(':password', $data['password']);
-        
+        $this->db->bind(':role', $data['role']);
+
+
 
         //Execute function
         if ($this->db->execute()) {
@@ -28,7 +33,8 @@ class Teachersmodel {
         }
     }
 
-    public function login($email, $password) {
+    public function login($email, $password)
+    {
         $this->db->query('SELECT * FROM teachers WHERE email = :email');
 
         //Bind value
@@ -46,7 +52,8 @@ class Teachersmodel {
     }
 
     //Find user by email. Email is passed in by the Controller.
-    public function findUserByEmail($email) {
+    public function findUserByEmail($email)
+    {
         //Prepared statement
         $this->db->query('SELECT * FROM teachers WHERE email = :email');
 
@@ -55,7 +62,28 @@ class Teachersmodel {
         $this->db->execute();
 
         //Check if email is already registered
-        if($this->db->rowCount() > 0) {
+        if ($this->db->rowCount() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function get()
+    {
+        $this->db->query('SELECT * FROM teachers order by tch_id DESC');
+        $this->db->execute();
+        return $this->db->resultSet();
+    }
+
+    public function delete($data)
+    {
+        $this->db->query('DELETE FROM teachers WHERE tch_id=:id');
+
+        $this->db->bind(':id', $data['id']);
+
+        //Execute function
+        if ($this->db->execute()) {
             return true;
         } else {
             return false;
