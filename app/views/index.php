@@ -26,13 +26,13 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="#abouts">About Us</a>
+                            <a class="nav-link" href="#abouts">À propos de nous</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sign">Teacher</a>
+                            <a class="nav-link" href="#sign">Professeur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sign">Student</a>
+                            <a class="nav-link" href="#sign">Etudiant</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -50,11 +50,11 @@
             <div class="container py-4">
                 <div class="row align-items-center pt-sm-5 pt-4">
                     <div class="col-md-6">
-                        <h3 class="mb-lg-4 mb-3">Your Kids Deserve The<span class="d-block">Best Education</span>
+                        <h3 class="mb-lg-4 mb-3">Vos enfants méritent le<span class="d-block">Meilleure éducation</span>
                         </h3>
-                        <p class="banner-sub">Active Learning, Expert Teachers & Safe Environment</p>
+                        <p class="banner-sub">Apprentissage actif, enseignants experts et environnement sûr</p>
                         <div class="d-flex align-items-center buttons-banner">
-                            <a href="#sign" class="btn btn-style mt-lg-5 mt-4">Admission Now</a>
+                            <a href="#sign" class="btn btn-style mt-lg-5 mt-4">Admission Maintenat</a>
                         </div>
                     </div>
                     <div class="col-md-6 right-banner-2 text-end position-relative mt-md-0 mt-5">
@@ -63,7 +63,7 @@
                         </div>
                         <div class="banner-style-1 position-absolute">
                             <div class="banner-style-2 position-relative">
-                                <h4>Back to School</h4>
+                                <h4>Retour à l'école</h4>
                             </div>
                         </div>
                     </div>
@@ -77,20 +77,18 @@
     <section class="w3l-service-1 py-2" id="sign">
         <div class="container py-md-5 py-4">
             <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
-                <p class="text-uppercase">Choose your role</p>
-                <h3 class="title-style">Tools For Teachers And Learners</h3>
+                <p class="text-uppercase">CHOISISSEZ VOTRE RÔLE</p>
+                <h3 class="title-style">Outils pour les enseignants et les apprenants</h3>
             </div>
             <div class="row content23-col-2 text-center">
                 <div class="col-md-6">
                     <div class="content23-grid content23-grid1">
-                        <h4><a href="<?php echo URLROOT; ?>/pages/teachersregister">Sign In as
-                                Teachers</a></h4>
+                        <h4><a href="<?php echo URLROOT; ?>/pages/teachersregister">Se connecter en tant qu'enseignant</a></h4>
                     </div>
                 </div>
                 <div class="col-md-6 mt-md-0 mt-4">
                     <div class="content23-grid content23-grid2">
-                        <h4><a href="<?php echo URLROOT; ?>/pages/studentsregister">Sign In as
-                                Student</a></h4>
+                        <h4><a href="<?php echo URLROOT; ?>/pages/studentsregister">Se connecter en tant qu'étudiant</a></h4>
                     </div>
                 </div>
             </div>
@@ -102,8 +100,8 @@
     <section class="w3l-servicesblock py-2" id="abouts">
         <div class="container py-md-5 py-4">
             <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
-                <p class="text-uppercase">What we believe</p>
-                <h3 class="title-style">About Us</h3>
+                <p class="text-uppercase">CE QUE NOUS CROYONS</p>
+                <h3 class="title-style">À propos de nous</h3>
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-6 position-relative home-block-3-left pb-lg-0 pb-5">
@@ -131,8 +129,8 @@
     <section class="w3l-contact py-2" id="contact">
         <div class="container py-md-5 py-4">
             <div class="title-main text-center mx-auto mb-md-5 mb-4" style="max-width:500px;">
-                <p class="text-uppercase">Get In Touch</p>
-                <h3 class="title-style">Contact Us</h3>
+                <p class="text-uppercase">ENTRER EN CONTACT</p>
+                <h3 class="title-style">Nous contacter</h3>
             </div>
             <div class="row contact-block">
                 <div class="col-md-7 contact-right">
@@ -140,20 +138,20 @@
                         <div class="input-grids">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <input type="text" name="w3lName" id="w3lName" placeholder="Your Name" class="contact-input" required="" />
+                                    <input type="text" name="w3lName" id="w3lName" placeholder="Votre Nom" class="contact-input" required="" />
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="email" name="w3lSender" id="w3lSender" placeholder="Your Email" class="contact-input" required="" />
+                                    <input type="email" name="w3lSender" id="w3lSender" placeholder="Votre Email" class="contact-input" required="" />
                                 </div>
                             </div>
                             <input type="text" name="w3lSubect" id="w3lSubect" placeholder="Subject" class="contact-input" required="" />
                             <input type="text" name="w3lWebsite" id="w3lWebsite" placeholder="Website URL" class="contact-input" required="" />
                         </div>
                         <div class="form-input">
-                            <textarea name="w3lMessage" id="w3lMessage" placeholder="Type your message here" required=""></textarea>
+                            <textarea name="w3lMessage" id="w3lMessage" placeholder="Tapez votre message ici" required=""></textarea>
                         </div>
                         <div class="text-start">
-                            <button class="btn btn-style btn-style-3">Send Message</button>
+                            <button class="btn btn-style btn-style-3">Envoyer Le message</button>
                         </div>
                     </form>
                 </div>
@@ -210,23 +208,23 @@
                 <div class="row footer-top-29 justify-content-md-center">
                     <div class="col-lg-6 col-md-6 footer-list-29">
                         <h6 class="footer-title-29">Contact Info </h6>
-                        <p class="mb-2 pe-xl-5">Address : Edu School, 10001, 5th Avenue, #06 lane street, NY - 62617.
+                        <p class="mb-2 pe-xl-5">Address : IdealProf, 10001, 5th Avenue, #06 lane street, NY - 62617.
                         </p>
-                        <p class="mb-2">Phone Number : <a href="tel:+1(21) 234 4567">+1(21) 234 4567</a></p>
+                        <p class="mb-2">Numéro de téléphone : <a href="tel:+1(21) 234 4567">+1(21) 234 4567</a></p>
                         <p class="mb-2">Email : <a href="mailto:info@example.com">info@example.com</a></p>
                     </div>
                     <div class="col-lg-2 col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
                         <ul>
-                            <h6 class="footer-title-29">Quick Links</h6>
-                            <li><a href="#abouts">About Us</a></li>
-                            <li><a href="#sign">Become a Teacher</a></li>
-                            <li><a href="#sign">Become a Student</a></li>
+                            <h6 class="footer-title-29">Liens</h6>
+                            <li><a href="#abouts">À propos de nous</a></li>
+                            <li><a href="#sign">Devenir a professeur</a></li>
+                            <li><a href="#sign">Devenir a etudiant</a></li>
                             <li><a href="<?php echo URLROOT; ?>/pages/adminlogin">Espace Admin</a></li>
-                            <li><a href="#contact">Contact Us</a></li>
+                            <li><a href="#contact">Contacter nous</a></li>
                         </ul>
                     </div>
                 </div>
-                <p class="copy-footer-29 text-center pt-lg-2 mt-5 pb-2">© 2021 IdealProf. All rights reserved.</p>
+                <p class="copy-footer-29 text-center pt-lg-2 mt-5 pb-2">© 2021 IdealProf. Tous les droits sont réservés.</p>
             </div>
         </div>
     </footer>

@@ -1,3 +1,13 @@
+(NULL, 'Nombres Complexes', 'Bokili Ali', '2ème Année Bac', 'Maths'),
+(NULL, 'Présent simple', 'Maslouh Azeddine', '2ème Année Bac', 'Francais'),
+(NULL, 'La Gravité', 'Jnafi Oussama', '2ème Année Bac', 'Physique'),
+(NULL, 'Les Molécules', 'Hachmi Hicham', '2ème Année Bac', 'Chimie'),
+(NULL, 'Histoire de langue', 'Gnaoui Salim', '2ème Année Bac', 'Arabe'),
+(NULL, 'Writing course', 'Hassani Achraf', '2ème Année Bac', 'Anglais'),
+(NULL, 'La Politique', 'Alimi Jaber', '2ème Année Bac', 'Philo')
+
+
+
 (NULL, 'Tarik Germoud', 'Nombres Complexes', 'Maths'),
 (NULL, 'Tarik Germoud', 'Présent simple', 'Francais'),
 (NULL, 'Tarik Germoud', 'La Gravité', 'Physique'),
@@ -26,3 +36,15 @@
 (NULL, 'Jalil Gouchi', 'Histoire de langue', 'Arabe'),
 (NULL, 'Jalil Gouchi', 'Writing course', 'Anglais'),
 (NULL, 'Jalil Gouchi', 'La Politique', 'Philo')
+
+
+
+(NULL, 'Jalil Gouchi', 'Writing course', 'Anglais'),
+(NULL, 'Mohammed Adil', 'Les Molécules', 'Chimie'),
+(NULL, 'Aymen Damigh', 'La Gravité', 'Physique'),
+(NULL, 'Othmane farouk', 'Présent simple', 'Francais'),
+(NULL, 'Said Hadi', 'La Politique', 'Philo'),
+(NULL, 'Mustafa Aderdour', 'Les Molécules', 'Chimie'),
+(NULL, 'Mehdi Benzema', 'Nombres Complexes', 'Maths'),
+(NULL, 'Salim Karim', 'Les Molécules', 'Chimie'),
+(NULL, 'Tarik Germoud', 'Writing course', 'Anglais'),

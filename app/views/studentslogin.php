@@ -85,7 +85,7 @@
                                         </div>
                                         <!-- Register buttons -->
                                         <div class="text-center mt-3">
-                                            <p class="text-light">Not a member? <a class="text-info" href="<?php echo URLROOT; ?>/pages/studentsregister">Create an account!</a></p>
+                                            <p class="text-light">Not a member? <a class="text-info" href="<?php echo URLROOT; ?>/pages/studentsregister" >Create an account!</a></p>
                                         </div>
                                     </form>
                                 </div>

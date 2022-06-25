@@ -12,37 +12,45 @@ class Pages extends Controller
 
     public function teachersregister()
     {
-        if ($_SESSION['role'] == 'Teacher') {
-            $this->view('teachersregister');
+        if (!empty($_SESSION['role'])) {
+            if ($_SESSION['role'] == 'Teacher') {
+                $this->view('home');
+            }
         } else {
-            $this->view('home');
+            $this->view('teachersregister');
         }
     }
 
     public function teacherslogin()
     {
-        if ($_SESSION['role'] == 'Teacher') {
-            $this->view('teacherslogin');
+        if (!empty($_SESSION['role'])) {
+            if ($_SESSION['role'] == 'Teacher') {
+                $this->view('home');
+            }
         } else {
-            $this->view('home');
+            $this->view('teacherslogin');
         }
     }
 
     public function studentsregister()
     {
-        if ($_SESSION['role'] == 'Student') {
-            $this->view('studentsregister');
+        if (!empty($_SESSION['role'])) {
+            if ($_SESSION['role'] == 'Student') {
+                $this->view('home');
+            }
         } else {
-            $this->view('home');
+            $this->view('studentsregister');
         }
     }
 
     public function studentslogin()
     {
-        if ($_SESSION['role'] == 'Student') {
-            $this->view('studentslogin');
+        if (!empty($_SESSION['role'])) {
+            if ($_SESSION['role'] == 'Student') {
+                $this->view('home');
+            }
         } else {
-            $this->view('home');
+            $this->view('studentslogin');
         }
     }
 
