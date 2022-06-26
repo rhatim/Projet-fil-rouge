@@ -108,6 +108,26 @@ require APPROOT . '/views/includes/header.php';
                             </div>
                         </div>
                     <?php endif; ?>
+                    <?php if ($_SESSION['role'] != 'Admin') :  ?>
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="p-3 bg4card shadow-sm rounded d-flex justify-content-between">
+                                <div>
+                                    <img style="height: 30px;" src="<?php echo URLROOT; ?>/public/img/icons/Pro.svg" alt="">
+                                    <p class="mb-0 py-2 ps">Réservations</p>
+                                </div>
+                                <div>
+                                    <h2 class="fw-bold mb-0 text-end">
+                                        <?php
+                                        if (count($data['reservation']) > 0) {
+                                            $num_rows = count($data['reservation']);
+                                            echo $num_rows;
+                                        }
+                                        ?>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
                 <div class="row g-3 pt-5">
                     <h4 class="m-0 fw-bold py-1">Listes des Réservations</h4>
@@ -123,15 +143,18 @@ require APPROOT . '/views/includes/header.php';
                         <div class="col-sm-3 col-lg-3 m-auto">
                             <p class=" m-0">Cour Matière</p>
                         </div>
-                        <div class="col-sm-3 col-lg-1 m-auto">
-                            <p class=" m-0">Actions</p>
-                        </div>
+                        <?php if ($_SESSION['role'] != 'Student') :  ?>
+                            <div class="col-sm-3 col-lg-1 m-auto">
+                                <p class=" m-0">Actions</p>
+                            </div>
+                        <?php endif; ?>
+
                     </div>
                     <div style="overflow-y: scroll;">
                         <div style="height:39vh; padding:0;">
                             <?php if (count($data['reservation']) > 0) { ?>
                                 <?php foreach ($data['reservation'] as $row) { ?>
-                                    <div class="item row  ps px-0 bar mar py-2" id="info" style="background-color: #dbfefa;">
+                                    <div class="item row  ps px-0 bar mar py-2 my-1" id="info" style="background-color: #dbfefa;">
                                         <div style="display: none;">
                                             <p class="student_id"><?php echo $row->res_id ?></p>
                                         </div>
@@ -144,15 +167,11 @@ require APPROOT . '/views/includes/header.php';
                                         <div class="col-3">
                                             <p style="font-size:12px;" class="text-nowrap m-0"><?php echo $row->crs_matiere ?></p>
                                         </div>
-                                        <div class="col-1 d-flex justify-content-center align-items-center" id="editer">
-                                            <?php if ($_SESSION['role'] != 'Student') :  ?>
+                                        <?php if ($_SESSION['role'] != 'Student') :  ?>
+                                            <div class="col-1 d-flex justify-content-center align-items-center" id="editer">
                                                 <a class="btn-delete" type="button" data-bs-toggle="modal" data-bs-target="#exampleModaldelete"><img style="width:22px;" class="px-1" src="<?php echo URLROOT ?>/public/img/icons/can.svg" alt=""></a>
-                                            <?php endif; ?>
-
-                                            <?php if ($_SESSION['role'] == 'Student') :  ?>
-                                                <a class="btn-delete" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalres"><img style="width:22px;" class="px-1" src="<?php echo URLROOT ?>/public/img/icons/pen.svg" alt=""></a>
-                                            <?php endif; ?>
-                                        </div>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
                                 <?php } ?>
                             <?php } else { ?>

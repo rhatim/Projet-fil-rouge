@@ -17,7 +17,7 @@ class Reservationscontroller extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Process form
             // Sanitize POST data
-            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $_POST = filter_input_array(INPUT_POST);
 
             $data = [
                 'std_name' => trim($_POST['std_name']),

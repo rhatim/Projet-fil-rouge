@@ -182,7 +182,7 @@
                                 </div>
                                 <div class="cont-right">
                                     <h6>Email Us</h6>
-                                    <p><a href="mailto:example@mail.com" class="mail">example@mail.com</a></p>
+                                    <p><a href="mailto:example@mail.com" class="mail">contact@idealprof.com</a></p>
                                 </div>
                             </div>
                             <div class="d-flex contact-grid mt-4 pt-lg-2">
@@ -191,7 +191,7 @@
                                 </div>
                                 <div class="cont-right">
                                     <h6>Customer Support</h6>
-                                    <p><a href="mailto:info@support.com" class="mail">info@support.com</a></p>
+                                    <p><a href="mailto:info@support.com" class="mail">info@idealprof.com</a></p>
                                 </div>
                             </div>
                         </div>
@@ -211,7 +211,7 @@
                         <p class="mb-2 pe-xl-5">Address : IdealProf, 10001, 5th Avenue, #06 lane street, NY - 62617.
                         </p>
                         <p class="mb-2">Numéro de téléphone : <a href="tel:+1(21) 234 4567">+1(21) 234 4567</a></p>
-                        <p class="mb-2">Email : <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p class="mb-2">Email : <a href="mailto:info@example.com">info@idealprof.com</a></p>
                     </div>
                     <div class="col-lg-2 col-md-3 col-6 footer-list-29 mt-md-0 mt-4">
                         <ul>
