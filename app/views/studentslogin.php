@@ -18,7 +18,7 @@
     <header id="site-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="<?php echo URLROOT; ?>/img/logolong.png" style="width: 200px;" alt=""></a>
+                <a class="navbar-brand" href="<?php echo URLROOT; ?>/pages/index"><img src="<?php echo URLROOT; ?>/img/logolong.png" style="width: 200px;" alt=""></a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
                     <span class="navbar-toggler-icon fa icon-close fa-times"></span>
@@ -26,13 +26,13 @@
                 <div class="collapse navbar-collapse" id="navbarScroll">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#abouts">About Us</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#abouts">À propos de nous</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Teacher</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Professeur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Student</a>
+                            <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#sign">Etudiant</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo URLROOT; ?>/pages/index#contact">Contact</a>
@@ -81,11 +81,11 @@
 
                                         <!-- Submit button -->
                                         <div class="text-center">
-                                            <button type="submit" name="submit" value="submit" class="btn btn-style" style="padding: 10px 46px 12px;">Log in</button>
+                                            <button type="submit" name="submit" value="submit" class="btn btn-style" style="padding: 10px 46px 12px;">Connecter</button>
                                         </div>
                                         <!-- Register buttons -->
                                         <div class="text-center mt-3">
-                                            <p class="text-light">Not a member? <a class="text-info" href="<?php echo URLROOT; ?>/pages/studentsregister" >Create an account!</a></p>
+                                            <p class="text-light">Not a member? <a class="text-info" href="<?php echo URLROOT; ?>/pages/studentsregister" >Creer un compte!</a></p>
                                         </div>
                                     </form>
                                 </div>
@@ -96,7 +96,7 @@
                                 </div>
                                 <div class="banner-style-1 position-absolute">
                                     <div class="banner-style-2 position-relative text-white">
-                                        <h4>Let's Log In</h4>
+                                        <h4>Se connecter</h4>
                                     </div>
                                 </div>
                             </div>

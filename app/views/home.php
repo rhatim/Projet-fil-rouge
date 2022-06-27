@@ -38,7 +38,7 @@ require APPROOT . '/views/includes/header.php';
                         <div class="p-3 bg1card shadow-sm rounded d-flex justify-content-between">
                             <div>
                                 <img style="height: 30px;" src="<?php echo URLROOT; ?>/public/img/icons/St.svg" alt="">
-                                <p class="mb-0 py-2 ps">Students</p>
+                                <p class="mb-0 py-2 ps">Etudiant</p>
                             </div>
                             <div>
                                 <h2 class="fw-bold mb-0 text-end">
@@ -56,7 +56,7 @@ require APPROOT . '/views/includes/header.php';
                         <div class="p-3 bg2card shadow-sm rounded d-flex justify-content-between">
                             <div>
                                 <img style="height: 30px;" src="<?php echo URLROOT; ?>/public/img/icons/Co.svg" alt="">
-                                <p class="mb-0 py-2 ps">Teachers</p>
+                                <p class="mb-0 py-2 ps">Professeur</p>
                             </div>
                             <div>
                                 <h2 class="fw-bold mb-0 text-end">
@@ -74,7 +74,7 @@ require APPROOT . '/views/includes/header.php';
                         <div class="p-3 bg3card shadow-sm rounded d-flex justify-content-between">
                             <div>
                                 <img style="height: 30px;" src="<?php echo URLROOT; ?>/public/img/icons/Report.svg" alt="">
-                                <p class="mb-0 py-2 ps">Courses</p>
+                                <p class="mb-0 py-2 ps">Cours</p>
                             </div>
                             <div>
                                 <h2 class="fw-bold mb-0 text-end">

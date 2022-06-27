@@ -1,7 +1,7 @@
 <!-- Sidebar -->
 <div class="bg-yellow bodyh" id="sidebar-wrapper">
     <div class="text-center py-3">
-        <a class="m-0" href="<?php echo URLROOT; ?>/pages/index">
+        <a class="m-0" href="<?php echo URLROOT; ?>/pages/home">
             <img src="<?php echo URLROOT; ?>/img/logolong.png" alt="logo" width="200" class="d-inline-block align-text-top">
         </a>
     </div>

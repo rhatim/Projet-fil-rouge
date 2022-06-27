@@ -1,10 +1,12 @@
 <?php
 class Pages extends Controller
 {
+
     public function index()
     {
         $this->view('index');
     }
+
     public function adminlogin()
     {
         $this->view('adminlogin');
@@ -14,7 +16,7 @@ class Pages extends Controller
     {
         if (!empty($_SESSION['role'])) {
             if ($_SESSION['role'] == 'Teacher') {
-                $this->view('home');
+                header('location:' . URLROOT . '/pages/home');
             }
         } else {
             $this->view('teachersregister');
@@ -25,7 +27,7 @@ class Pages extends Controller
     {
         if (!empty($_SESSION['role'])) {
             if ($_SESSION['role'] == 'Teacher') {
-                $this->view('home');
+                header('location:' . URLROOT . '/pages/home');
             }
         } else {
             $this->view('teacherslogin');
@@ -36,7 +38,7 @@ class Pages extends Controller
     {
         if (!empty($_SESSION['role'])) {
             if ($_SESSION['role'] == 'Student') {
-                $this->view('home');
+                header('location:' . URLROOT . '/pages/home');
             }
         } else {
             $this->view('studentsregister');
@@ -47,7 +49,7 @@ class Pages extends Controller
     {
         if (!empty($_SESSION['role'])) {
             if ($_SESSION['role'] == 'Student') {
-                $this->view('home');
+                header('location:' . URLROOT . '/pages/home');
             }
         } else {
             $this->view('studentslogin');

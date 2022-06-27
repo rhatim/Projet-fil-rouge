@@ -15,7 +15,7 @@ require APPROOT . '/views/includes/header.php';
             <div class="bg-whiter container-fluid">
                 <div style="height:80vh;" class="container-fluid px-4">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h4 class="m-0 fw-bold">Teachers List</h4>
+                        <h4 class="m-0 fw-bold">listes des professeurs</h4>
                         <div class="d-flex justify-content-center align-items-center">
                             <img class="m-0 px-4" src="icons/doublearrows.svg" alt="">
                             <button class="my-2 w-100 btn btn-lg rounded-4 standard text-white ps" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">ADD NEW TEACHER</button>

@@ -15,7 +15,7 @@ require APPROOT . '/views/includes/header.php';
             <div class="bg-whiter container-fluid">
                 <div style="height:80vh;" class="container-fluid px-4">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h4 class="m-0 fw-bold">Admins List</h4>
+                        <h4 class="m-0 fw-bold">Listes des admins</h4>
                         <div class="d-flex justify-content-center align-items-center">
                             <img class="m-0 px-4" src="icons/doublearrows.svg" alt="">
                             <button class="my-2 w-100 btn btn-lg rounded-4 standard text-white ps" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Ajouter Nouveau Admin</button>
@@ -66,7 +66,7 @@ require APPROOT . '/views/includes/header.php';
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="px-4 py-3">
-                                            Do you really want to delete this admin? <br>
+                                        Voulez-vous supprimer cet admin <br>
                                         </div>
                                         <form action="<?php echo URLROOT; ?>/Admincontroller/delete" method="POST">
                                             <input type="text" style="display: none;" name="id" class="id">

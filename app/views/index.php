@@ -18,7 +18,7 @@
     <header id="site-header">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="<?php echo URLROOT; ?>/img/logolong.png" style="width: 200px;" alt=""></a>
+                <a class="navbar-brand" href="<?php echo URLROOT; ?>/pages/index"><img src="<?php echo URLROOT; ?>/img/logolong.png" style="width: 200px;" alt=""></a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
                     <span class="navbar-toggler-icon fa icon-close fa-times"></span>

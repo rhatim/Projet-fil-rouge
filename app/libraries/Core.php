@@ -17,7 +17,7 @@ class Core
     $url = $this->getUrl();
 
     // Look in BLL for first value
-    if (isset($url[1])) {
+    if (isset($url[0])) {
       if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
         // If exists, set as controller
         $this->currentController = ucwords($url[0]);
